@@ -1,59 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Registration Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
 </head>
 <body>
+<form>
+	<label for="name">Name:</label>
+	<input type="text" id="name" name="name" placeholder="Enter your name"maxlength="25" required><br><br>
 
-    <form>
-        <!-- Name Field -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="25" required><br><br>
+	<label for="email">E mail:</label>
+	<input type="email" id="email" name="email" value="test@example.com"  required autofocus><br><br>
 
-        <!-- Email Field (Autofocus & Default Value) -->
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="test@example.com" required autofocus><br><br>
+	<label for="pwd">Password</label>
+	<input type="Password" id="pwd" name="pwd" minlength="6" required><br><br>
 
-        <!-- Password Field (Min 6 characters) -->
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" minlength="6" required><br><br>
+	<label for="category">Choose Category:</label>
+	<select id="category" name="category" required>
+		<option value="Student">Student</option>
+		<option value="Employee">Employee</option>
+		<option value="Freelancer" selected>Freelancer</option>	
+	</select><br><br>
 
-        <!-- Category Dropdown (Default: Freelancer) -->
-        <label for="category">Category:</label>
-        <select id="category" name="category" required>
-            <option value="student">Student</option>
-            <option value="employee">Employee</option>
-            <option value="freelancer" selected>Freelancer</option>
-        </select><br><br>
+	<label for="date">Event Date</label>
+	<input type="date" id="date" name="date"required><br><br>
 
-        <!-- Date Input Field -->
-        <label for="event_date">Event Date:</label>
-        <input type="date" id="event_date" name="event_date" required><br><br>
+	<label>Ticket no:</label>
 
-        <!-- Radio Buttons (Default: 2 Tickets) -->
-        <label>Tickets:</label>
-        <input type="radio" id="ticket1" name="tickets" value="1">
-        <label for="ticket1">1 Ticket</label>
+	<input type="radio" id="ticket1" name="ticket" value="ticket1">
+	<label for="ticket1">1 Ticket</label>
 
-        <input type="radio" id="ticket2" name="tickets" value="2" checked>
-        <label for="ticket2">2 Tickets</label>
+	<input type="radio"id="ticket2" name="ticket" value="ticket2" checked>
+	<label for="ticket2">2 Tickets</label>
 
-        <input type="radio" id="ticket3" name="tickets" value="3">
-        <label for="ticket3">3 Tickets</label><br><br>
 
-        <!-- Checkbox for Online Payment -->
-        <label for="payment">Online Payment:</label>
-        <input type="checkbox" id="payment" name="payment" value="yes"><br><br>
 
-        <!-- Notes Text Area (Optional) -->
-        <label for="notes">Notes:</label>
-        <textarea id="notes" name="notes" placeholder="Additional notes"></textarea><br><br>
+	<input type="radio" id="ticket3" name="ticket" value="ticket3">
+	<label for="ticket3">3 Tickets</label><br><br>
 
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
-    </form>
+	<label for="payment">Online Payment:</label>
+	<input type="checkbox" id="payment" name="payment" value="yes"><br><br>
+
+	<label for="notes">Notes:</label>
+	<textarea id="notes" name="notes" placeholder="Additional notes"></textarea><br><br>
+
+	<input type="submit" name="submit" ><br>
+
+
+</form>
+
+
 
 </body>
 </html>
